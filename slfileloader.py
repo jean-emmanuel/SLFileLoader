@@ -51,13 +51,11 @@ for i in range(n_loop):
 class Gui(wx.Frame):
     def __init__(self, parent=None, title='SL File Loader', pos=(100,100), size=(444,2+82*n_loop)):
         wx.Frame.__init__(self, parent, id=-1, title=title, pos=pos, size=size)
-        self.SetBackgroundColour('#333')
         self.loop_durations, self.loops, self.labels, self.selectors, self.prev_buttons, self.next_buttons, self.load_buttons, self.gauges, self.trig_buttons, self.once_buttons, self.mute_buttons, self.pause_buttons, self.volume_sliders, self.volume_labels = range(n_loop), [], [], [], [], [], [], [], [], [], [], [], [], []
         
         for i in range(n_loop):
             
             self.loops.append(wx.Panel(self, id=i, pos=(2, 2+i*82), size=(440,80)))
-            self.loops[i].SetBackgroundColour('#eee')
             
             self.labels.append(wx.Button(self.loops[i], id=-1, pos=(0,0), label='Loop '+str(i+1), size=(60,40)))
 
