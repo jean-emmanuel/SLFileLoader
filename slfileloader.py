@@ -36,6 +36,9 @@ import wx, os
 import liblo as osc
 from math import log10, log
 
+# Uncomment next line to force a different theme from the system's default one.
+#os.environ['GTK2_RC_FILES'] = '/usr/share/themes/Darklooks/gtk-2.0/gtkrc' 
+
 # N of loops
 n_loop = len(directories)
 
