@@ -134,7 +134,6 @@ class Gui(wx.Frame):
         i = self.getLoop(e)
         file_path = directories[i]+files[i][self.selectors[i].GetSelection()]
         osc.send('osc.udp://'+sl_host+':'+str(sl_port),'/sl/'+str(i)+'/load_loop',file_path,return_host+':'+str(return_port),'/load_error/'+str(i+1))
-        print('osc.udp://'+sl_host+':'+str(sl_port),'/sl/'+str(i)+'/load_loop',file_path,return_host+':'+str(return_port),'/load_error/'+str(i+1))
 
     def trig(self,e):
         i = self.getLoop(e)
